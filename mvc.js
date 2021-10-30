@@ -105,3 +105,42 @@ class Model {
     this.currentPlayer = this.currentPlayer === "black" ? "white" : "black";
   }
 }
+
+class View {
+  constructor() {
+    this.playEvent = new Event();
+  }
+
+  render() {
+    const board = document.createElement("div");
+    board.className = "board";
+
+    this.cells = Array(49)
+      .fill()
+      .map((_, i) => {
+        const cell = document.createElement("div");
+        cell.className = "cell";
+
+        cell.addEventListener("click", () => {
+          this.playEvent.trigger(i);
+        });
+
+        board.append(cell);
+
+        return cell;
+      });
+    show.append(board);
+  }
+
+  updateCell(data) {
+    this.cells[data.move].style.background = data.player;
+  }
+
+  victory(winner) {
+      niceAlert(`${winner}  wins`,winner)
+  }
+
+  draw() {
+    niceAlert("It's a draw!")
+  }
+}
