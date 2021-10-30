@@ -1,0 +1,46 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Sriracha&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap");
+
+body {
+  background: linear-gradient(to right, #000000, #434343);
+  font-family: "Sriracha", sans-serif;
+}
+
+.board {
+  display: grid;
+  position: absolute;
+  width: 430px;
+  grid-template-rows: 60px 60px 60px 60px 60px 60px 60px;
+  grid-template-columns: 60px 60px 60px 60px 60px 60px 60px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background: rgba(88, 81, 81, 40%);
+  left: 32.5%;
+}
+
+.cell {
+  border: 2px solid rgba(177, 162, 162, 0.466);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: rgb(187, 158, 121);
+}
+h1{
+  font-size: 60px;
+  color: rgb(214, 200, 200);
+  text-shadow: 4px 0 black, -4px 0 black, 0 4px black, 0 -4px black, 2px 2px black, -2px -2px black, -2px 2px black, 2px -2px black;
+}
+#reset{
+color: rgba(233, 225, 225, 0.753) ;
+border: 1px solid wheat;
+border-radius: 10px;
+}
+#reset:hover{
+  border-radius: 10px;
+  background-color:rgba(233, 225, 225, 0.226) ;
+}
