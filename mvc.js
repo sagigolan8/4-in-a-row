@@ -172,3 +172,16 @@ class Controller {
 const app = new Controller();
 
 app.run();
+
+///////////////////////////////////////////--alert messege--//////////////////////////////////////////////
+
+const niceAlert =(textVal,winner) =>{
+  Swal.fire({
+    title: `<b style="color:${winner};text-shadow: 2px 0 grey, -2px 0 grey, 0 2px grey, 0 -2px grey, 1px 1px grey, -1px -1px grey, -1px 1px grey, 1px -1px grey;
+    ;box-shadow: 3px 2px 5px 3px black;">${textVal}!</b>`,
+    imageUrl: 'image/win.gif',
+    imageWidth: 250,
+    imageHeight: 230,
+    imageAlt: 'winner',
+  })
+  }
